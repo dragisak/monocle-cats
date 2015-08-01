@@ -1,3 +1,6 @@
 language: scala
-script: "sbt clean scalastyle coverage +test"
-after_success: "sbt coveralls"
+scala:
+   - 2.10.5
+   - 2.11.7
+script: "sbt ++$TRAVIS_SCALA_VERSION clean scalastyle coverage test"
+after_success: "sbt ++$TRAVIS_SCALA_VERSION coveralls"

@@ -1,6 +1,6 @@
 # Monocle Lenses and Cats State
 
-[![Build Status](https://travis-ci.org/dragisak/monocle-cats.svg)](https://travis-ci.org/dragisak/monocle-cats)
+[![Build Status](https://travis-ci.org/dragisak/monocle-cats.svg)](https://travis-ci.org/dragisak/monocle-cats) [![Coverage Status](https://coveralls.io/repos/dragisak/monocle-cats/badge.svg?branch=master&service=github)](https://coveralls.io/github/dragisak/monocle-cats?branch=master)
 
 This library brings together [Monocle Lenses](https://github.com/julien-truffaut/Monocle)  and [Cats](https://github.com/non/cats) project.
 
