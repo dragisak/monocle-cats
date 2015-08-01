@@ -37,3 +37,5 @@ scalacOptions ++= Seq(
   "-Xfuture",
   "-language:higherKinds"
 )
+
+scalastyleFailOnError := true
