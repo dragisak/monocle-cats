@@ -39,3 +39,5 @@ scalacOptions ++= Seq(
 )
 
 scalastyleFailOnError := true
+
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
