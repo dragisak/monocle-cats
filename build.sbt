@@ -22,3 +22,18 @@ libraryDependencies ++= Seq(
 )
 
 addCompilerPlugin("org.scalamacros" %% "paradise" % "2.0.1" cross CrossVersion.full)
+
+scalacOptions ++= Seq(
+  "-feature",
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-unchecked",
+  "-Xfatal-warnings",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Xfuture",
+  "-language:higherKinds"
+)
