@@ -8,9 +8,9 @@ Example:
 @Lenses case class Address(street: String, city: String, zip: Int)
 @Lenses case class Person(name: String, address: Address)
 
-val setStreet(s: String) = Address.street := s
+def setStreet(s: String) = Address.street := s
 
-val setPersonStreet(s: String) = Person.address %%= setStreet(s)
+def setPersonStreet(s: String) = Person.address %%= setStreet(s)
 
 ```
 
