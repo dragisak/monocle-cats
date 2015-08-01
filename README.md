@@ -1,5 +1,7 @@
 # Monocle Lenses and Cats State
 
+[![Build Status](https://travis-ci.org/dragisak/monocle-cats.svg)](https://travis-ci.org/dragisak/monocle-cats)
+
 This library brings together Monocle Lenses and Cats project.
 
 Example:
