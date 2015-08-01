@@ -6,6 +6,8 @@ version := "0.1.2-SNAPSHOT"
 
 scalaVersion := "2.11.7"
 
+crossScalaVersions := Seq("2.10.5", "2.11.7")
+
 val catsVersion = "0.1.2"
 
 val monocleVersion = "1.1.1"
