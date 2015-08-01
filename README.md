@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dragisak/monocle-cats.svg)](https://travis-ci.org/dragisak/monocle-cats)
 
-This library brings together Monocle Lenses and Cats project.
+This library brings together [Monocle Lenses](https://github.com/julien-truffaut/Monocle)  and [Cats](https://github.com/non/cats) project.
 
 Example:
 
