@@ -2,6 +2,8 @@ organization := "com.dragisak"
 
 name := "monocle-cats"
 
+version := "0.1.2-SNAPSHOT"
+
 scalaVersion := "2.11.7"
 
 val catsVersion = "0.1.2"
