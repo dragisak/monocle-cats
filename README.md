@@ -7,12 +7,24 @@ This library brings together [Monocle Lenses](https://github.com/julien-truffaut
 Example:
 
 ```scala
+import cats.monocle.syntax._
+import cats.std.all._
+import monocle.macros.Lenses
+
 @Lenses case class Address(street: String, city: String, zip: Int)
-@Lenses case class Person(name: String, address: Address)
+@Lenses case class Person(name: String, age:Int, address: Address)
 
-def setStreet(s: String) = Address.street := s
+val setStreet = Address.street := "13 Main St."
+val incrementAge = Person.age += 1
 
-def setPersonStreet(s: String) = Person.address %%= setStreet(s)
+val state = for {
+  newStreetName <- Person.address %%= setStreet
+  newAge        <- incrementAge
+} yield(newStreetName, newAge)
+
+val person = Person("Alice", 30, Address("1 Main St", "San Francisco", 94123))
+
+val (changedPerson, (newStreet, newAge)) = state.run(person).run
 
 ```
 
