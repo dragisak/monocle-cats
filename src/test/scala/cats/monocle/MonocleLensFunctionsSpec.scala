@@ -2,11 +2,11 @@ package cats.monocle
 
 import monocle.macros.Lenses
 import org.scalatest._
-import cats.std.all._
 
 class MonocleLensFunctionsSpec extends WordSpec with Matchers {
 
   import MonocleLens._
+  import cats.std.all._
 
   @Lenses case class Address(street: String, city: String, zip: Int)
 
