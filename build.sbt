@@ -1,4 +1,4 @@
-organization := "com.dragisak"
+organization := "com.dragishak"
 
 name := "monocle-cats"
 
