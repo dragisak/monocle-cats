@@ -1,6 +1,6 @@
 package cats.monocle
 
-import cats.state.State
+import cats.data.State
 import cats.{Monoid, Semigroup}
 import monocle.Lens
 
