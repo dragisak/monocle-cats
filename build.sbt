@@ -41,3 +41,25 @@ scalacOptions ++= Seq(
 scalastyleFailOnError := true
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+
+homepage := Some(url("https://github.com/Ticketfly/play-liquibase"))
+
+organizationName := "Dragisa Krsmanovic"
+
+organizationHomepage := Some(url("https://github.com/dragisak"))
+
+description := "Utilities for combining Cats and Monocle lenses"
+
+pomExtra in Global := {
+  <scm>
+    <connection>scm:git:github.com:dragisak/monocle-cats.git</connection>
+    <url>git@github.com:dragisak/monocle-cats.git</url>
+  </scm>
+  <developers>
+    <developer>
+      <id>dragisak</id>
+      <name>Dragisa Krsmanovic</name>
+      <url>https://github.com/dragisak/</url>
+    </developer>
+  </developers>
+}
