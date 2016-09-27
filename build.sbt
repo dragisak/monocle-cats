@@ -42,7 +42,7 @@ scalastyleFailOnError := true
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
-homepage := Some(url("https://github.com/Ticketfly/play-liquibase"))
+homepage := Some(url("https://github.com/dragisak/monocle-cats"))
 
 organizationName := "Dragisa Krsmanovic"
 
