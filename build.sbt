@@ -2,7 +2,7 @@ organization := "com.dragishak"
 
 name := "monocle-cats"
 
-version := "0.1.2-SNAPSHOT"
+version := "1.0"
 
 scalaVersion := "2.11.8"
 
@@ -22,27 +22,21 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.0" cross CrossVersion.full)
 
-def scalacOptionsVersion(scalaVersion: String) = {
-  Seq(
-    "-feature",
-    "-deprecation",
-    "-encoding", "UTF-8",
-    "-unchecked",
-    "-Xfatal-warnings",
-    "-Xlint",
-    "-Yno-adapted-args",
-    "-Ywarn-dead-code",
-    "-Ywarn-numeric-widen",
-    "-Ywarn-value-discard",
-    "-Xfuture",
-    "-language:higherKinds"
-  ) ++ (CrossVersion.partialVersion(scalaVersion) match {
-    case Some((2, scalaMajor)) if scalaMajor == 11 => Seq("-Ywarn-unused-import")
-    case _ => Nil
-  })
-}
 
-scalacOptions ++= scalacOptionsVersion(scalaVersion.value)
+scalacOptions ++= Seq(
+  "-feature",
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-unchecked",
+  "-Xfatal-warnings",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Xfuture",
+  "-language:higherKinds"
+)
 
 scalastyleFailOnError := true
 

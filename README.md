@@ -4,11 +4,17 @@
 
 This library brings together [Monocle Lenses](https://github.com/julien-truffaut/Monocle)  and [Cats](https://github.com/non/cats) project.
 
-Example:
+## Use
+
+```scala
+libraryDependencies += "com.dragishak" %% "monocle-lens % "1.0"
+```
+
+## Example
 
 ```scala
 import cats.monocle.syntax._
-import cats.std.all._
+import cats.instances.all._
 import monocle.macros.Lenses
 
 @Lenses case class Address(street: String, city: String, zip: Int)
@@ -24,7 +30,7 @@ val state = for {
 
 val person = Person("Alice", 30, Address("1 Main St", "San Francisco", 94123))
 
-val (changedPerson, (newStreet, newAge)) = state.run(person).run
+val (changedPerson, (newStreet, newAge)) = state.run(person).value
 
 ```
 
@@ -33,4 +39,4 @@ val (changedPerson, (newStreet, newAge)) = state.run(person).run
 All code is available to you under the MIT license, available at [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) and also
 in the LICENSE file.
 
-Copyright Dragisa Krsmanovic, 2015.
+Copyright Dragisa Krsmanovic, 2016.
