@@ -9,7 +9,7 @@ This library brings together [Monocle Lenses](https://github.com/julien-truffaut
 ## Use
 
 ```scala
-libraryDependencies += "com.dragishak" %% "monocle-lens % "1.0"
+libraryDependencies += "com.dragishak" %% "monocle-lens" % "1.0"
 ```
 
 ## Example
