@@ -2,13 +2,8 @@ language: scala
 scala:
     - 2.10.6
     - 2.11.8
+    - 2.12.0
 jdk:
-    - oraclejdk7
-
-matrix:
-  include:
-  - scala: 2.12.0
-    jdk: oraclejdk8
-
+    - oraclejdk8
 script: sbt ++$TRAVIS_SCALA_VERSION scalastyle coverage test
 after_success: sbt coveralls
