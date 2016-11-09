@@ -2,7 +2,7 @@ organization := "com.dragishak"
 
 name := "monocle-cats"
 
-version := "1.1-SNAPSHOT"
+version := "1.1"
 
 scalaVersion := "2.12.0"
 
