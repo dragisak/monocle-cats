@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.typelevel"               %% "cats"           % catsVersion,
   "com.github.julien-truffaut"  %% "monocle-core"   % monocleVersion,
   "com.github.julien-truffaut"  %% "monocle-macro"  % monocleVersion  % Test,
-  "org.scalatest"               %% "scalatest"      % "3.0.0"         % Test
+  "org.scalatest"               %% "scalatest"      % "3.0.1"         % Test
 
 )
 
