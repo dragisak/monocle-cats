@@ -8,9 +8,9 @@ scalaVersion := "2.12.0"
 
 crossScalaVersions := Seq("2.10.6", "2.11.8", "2.12.0")
 
-val catsVersion = "0.8.1"
+val catsVersion = "0.9.0"
 
-val monocleVersion = "1.3.2"
+val monocleVersion = "1.4.0"
 
 libraryDependencies ++= Seq(
   "org.typelevel"               %% "cats"           % catsVersion,
