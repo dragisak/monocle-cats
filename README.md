@@ -9,12 +9,12 @@ This library brings together [Monocle Lenses](https://github.com/julien-truffaut
 ## Use
 
 ```scala
-libraryDependencies += "com.dragishak" %% "monocle-lens" % "<version>"
+libraryDependencies += "com.dragishak" %% "monocle-cats" % "<version>"
 ```
 
 ## Versions
 
-Monocle | Cats  | monocle-lens 
+Monocle | Cats  | monocle-cats 
 --------|-------|-------------
 1.2.2   | 0.7.2 | 1.0
 1.3.2   | 0.8.1 | 1.1
