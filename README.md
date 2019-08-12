@@ -37,7 +37,7 @@ val incrementAge = Person.age += 1
 val state = for {
   newStreetName <- Person.address %%= setStreet
   newAge        <- incrementAge
-} yield(newStreetName, newAge)
+} yield (newStreetName, newAge)
 
 val person = Person("Alice", 30, Address("1 Main St", "San Francisco", 94123))
 
