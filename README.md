@@ -50,4 +50,4 @@ val (changedPerson, (newStreet, newAge)) = state.run(person).value
 All code is available to you under the MIT license, available at [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT) and also
 in the LICENSE file.
 
-Copyright Dragisa Krsmanovic, 2016.
+Copyright Dragisa Krsmanovic, 2019.
