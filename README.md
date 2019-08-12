@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dragisak/monocle-cats.svg)](https://travis-ci.org/dragisak/monocle-cats) 
 [![Coverage Status](https://coveralls.io/repos/dragisak/monocle-cats/badge.svg?branch=master&service=github)](https://coveralls.io/github/dragisak/monocle-cats?branch=master)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dragishak/monocle-cats_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.dragishak/monocle-cats_2.11) 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dragishak/monocle-cats_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.dragishak/monocle-cats_2.13) 
 
 This library brings together [Monocle Lenses](https://github.com/julien-truffaut/Monocle)  and [Cats](https://github.com/non/cats) project.
 
