@@ -49,16 +49,12 @@ scalacOptions ++= PartialFunction
 
 scalastyleFailOnError := true
 
+publishTo := sonatypePublishTo.value
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-
 homepage := Some(url("https://github.com/dragisak/monocle-cats"))
-
 organizationName := "Dragisa Krsmanovic"
-
 organizationHomepage := Some(url("https://github.com/dragisak"))
-
 description := "Utilities for combining Cats and Monocle lenses"
-
 pomExtra in Global := {
   <scm>
     <connection>scm:git:github.com:dragisak/monocle-cats.git</connection>
