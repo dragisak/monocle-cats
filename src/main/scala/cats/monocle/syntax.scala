@@ -6,7 +6,6 @@ import monocle.Lens
 
 object syntax {
 
-
   implicit class MonocleLensOps[A, B](val l: Lens[A, B]) extends AnyVal {
 
     def :=(a: B): State[A, B] = MonocleLens.set(l)(a)
@@ -18,6 +17,5 @@ object syntax {
     def %%=[C](st: State[B, C]): State[A, C] = MonocleLens.transform(l)(st)
 
   }
-
 
 }
