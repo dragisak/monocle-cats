@@ -1,6 +1,6 @@
 organization := "com.dragishak"
 name := "monocle-cats"
-version := "1.3-SNAPSHOT"
+version := "1.3-RC1"
 scalaVersion := "2.13.0"
 
 crossScalaVersions := List("2.12.9", "2.13.0")
