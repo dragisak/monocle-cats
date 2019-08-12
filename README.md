@@ -12,13 +12,13 @@ This library brings together [Monocle Lenses](https://github.com/julien-truffaut
 libraryDependencies += "com.dragishak" %% "monocle-cats" % "<version>"
 ```
 
-## Versions
+## Version support matrix
 
-Monocle | Cats  | monocle-cats 
---------|-------|-------------
-1.2.2   | 0.7.2 | 1.0
-1.3.2   | 0.8.1 | 1.1
-1.4.0   | 0.9.0 | 1.2
+Monocle | Cats  | Scala            | monocle-cats 
+--------|-------|------------------|-----------------
+1.2.2   | 0.7.2 | 2.10, 2.11       | 1.0
+1.3.2   | 0.8.1 | 2.10, 2.11, 2.12 | 1.1    
+1.4.0   | 0.9.0 | 2.10, 2.11, 2.12 | 1.2  
 
 ## Example
 
