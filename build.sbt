@@ -1,23 +1,31 @@
 organization := "com.dragishak"
 name := "monocle-cats"
 version := "1.3-SNAPSHOT"
-scalaVersion := "2.12.1"
+scalaVersion := "2.13.0"
 
-crossScalaVersions := Seq("2.10.6", "2.11.8", "2.12.1")
+crossScalaVersions := List("2.12.9", "2.13.0")
 
-val catsVersion    = "0.9.0"
-val monocleVersion = "1.4.0"
+val monocleVersion = "2.0.0-RC1"
 
-libraryDependencies ++= Seq(
-  "org.typelevel"              %% "cats"          % catsVersion,
+libraryDependencies ++= List(
   "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
   "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion % Test,
-  "org.scalatest"              %% "scalatest"     % "3.0.8" % Test
+  "org.scalatest"              %% "scalatest"     % "3.0.8" % Test,
+  "org.scala-lang"             % "scala-reflect"  % scalaVersion.value % Test
 )
 
-addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.0" cross CrossVersion.full)
+lazy val paradisePlugin = Def.setting {
+  CrossVersion.partialVersion(scalaVersion.value) match {
+    case Some((2, v)) if v <= 12 =>
+      List(compilerPlugin("org.scalamacros" % "paradise" % "2.1.1" % Test cross CrossVersion.patch))
+    case _ =>
+      // Scala 2.13, macro annotations merged into scala-reflect
+      Nil
+  }
+}
+libraryDependencies ++= paradisePlugin.value
 
-scalacOptions ++= Seq(
+scalacOptions ++= List(
   "-feature",
   "-deprecation",
   "-encoding",
@@ -25,13 +33,19 @@ scalacOptions ++= Seq(
   "-unchecked",
   "-Xfatal-warnings",
   "-Xlint",
-  "-Yno-adapted-args",
   "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
-  "-Xfuture",
   "-language:higherKinds"
 )
+
+scalacOptions ++= PartialFunction
+  .condOpt(CrossVersion.partialVersion(scalaVersion.value)) {
+    case Some((2, n)) if n <= 12 => List("-Xfuture", "-Yno-adapted-args")
+    case Some((2, n)) if n >= 13 => List("-Ymacro-annotations")
+  }
+  .toList
+  .flatten
 
 scalastyleFailOnError := true
 
