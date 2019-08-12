@@ -19,7 +19,7 @@ class MonocleLensFunctionsSpec extends WordSpec {
 
       val address = Address("1 Market St.", "Foo", 12345)
 
-      val s1 = "2 Central St."
+      val s1    = "2 Central St."
       val state = set(Address.street)(s1)
 
       val (a2, s) = state.run(address).value
@@ -31,8 +31,8 @@ class MonocleLensFunctionsSpec extends WordSpec {
     "transform" in {
 
       val address = Address("1 Market St.", "Foo", 12345)
-      val person = Person("R2D2", address)
-      val s1 = "2 Central St."
+      val person  = Person("R2D2", address)
+      val s1      = "2 Central St."
 
       val state1 = set(Address.street)(s1)
 

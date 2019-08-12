@@ -5,5 +5,5 @@ scala:
     - 2.12.1
 jdk:
     - oraclejdk8
-script: sbt ++$TRAVIS_SCALA_VERSION scalastyle coverage test
+script: sbt ++$TRAVIS_SCALA_VERSION scalafmtCheck scalastyle coverage test
 after_success: sbt coveralls

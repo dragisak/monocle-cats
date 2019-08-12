@@ -24,7 +24,7 @@ class SyntaxSpec extends WordSpec {
     }
 
     "%%=" in {
-      val st = Address.street := "Foo"
+      val st  = Address.street := "Foo"
       val st2 = Person.address %%= st
 
       val (p1, s) = st2.run(Person("Will", Address("Yar", "Far", 123))).value
