@@ -1,11 +1,18 @@
 organization := "com.dragishak"
 name := "monocle-cats"
 version := "1.3-SNAPSHOT"
-scalaVersion := "2.12.9"
+scalaVersion := "2.13.0"
 
 crossScalaVersions := List("2.12.9", "2.13.0")
 
 val monocleVersion = "2.0.0-RC1"
+
+libraryDependencies ++= List(
+  "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
+  "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion % Test,
+  "org.scalatest"              %% "scalatest"     % "3.0.8" % Test,
+  "org.scala-lang"             % "scala-reflect"  % scalaVersion.value % Test
+)
 
 lazy val paradisePlugin = Def.setting {
   CrossVersion.partialVersion(scalaVersion.value) match {
@@ -16,14 +23,6 @@ lazy val paradisePlugin = Def.setting {
       Nil
   }
 }
-
-libraryDependencies ++= List(
-  "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
-  "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion % Test,
-  "org.scalatest"              %% "scalatest"     % "3.0.8" % Test,
-  "org.scala-lang"             % "scala-reflect"  % scalaVersion.value % Test
-)
-
 libraryDependencies ++= paradisePlugin.value
 
 scalacOptions ++= List(
@@ -39,6 +38,14 @@ scalacOptions ++= List(
   "-Ywarn-value-discard",
   "-language:higherKinds"
 )
+
+scalacOptions ++= PartialFunction
+  .condOpt(CrossVersion.partialVersion(scalaVersion.value)) {
+    case Some((2, n)) if n <= 12 => List("-Xfuture", "-Yno-adapted-args")
+    case Some((2, n)) if n >= 13 => List("-Ymacro-annotations")
+  }
+  .toList
+  .flatten
 
 scalastyleFailOnError := true
 
