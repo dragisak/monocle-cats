@@ -3,9 +3,9 @@ name := "monocle-cats"
 version := "1.4-SNAPSHOT"
 scalaVersion := "2.13.0"
 
-crossScalaVersions := List("2.12.9", "2.13.0")
+crossScalaVersions := List("2.12.10", "2.13.0")
 
-val monocleVersion = "2.0.0-RC1"
+val monocleVersion = "2.0.0"
 
 libraryDependencies ++= List(
   "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
